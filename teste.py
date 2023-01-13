@@ -27,7 +27,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     Returns:
         pd.DataFrame: Filtered dataframe
     """
-    modify = st.checkbox("Add filters")
+    modify = st.sidebar.checkbox("Adicione Filtros")
 
     if not modify:
         return df
@@ -48,23 +48,24 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
     modification_container = st.container()
 
     with modification_container:
-        to_filter_columns = st.multiselect("Filter dataframe on", df.columns)
+        to_filter_columns = st.sidebar.multiselect("Filtre o dataframe por:", df.columns)
         for column in to_filter_columns:
             left, right = st.columns((1, 20))
             # Treat columns with < 10 unique values as categorical
             if is_categorical_dtype(df[column]) or df[column].nunique() < 10:
-                user_cat_input = right.multiselect(
-                    f"Values for {column}",
+                
+                user_cat_input = st.sidebar.multiselect(
+                    f"Valores para {column}",
                     df[column].unique(),
-                    default=list(df[column].unique()),
+                   	default=list(df[column].unique()),
                 )
                 df = df[df[column].isin(user_cat_input)]
             elif is_numeric_dtype(df[column]):
                 _min = float(df[column].min())
                 _max = float(df[column].max())
                 step = (_max - _min) / 100
-                user_num_input = right.slider(
-                    f"Values for {column}",
+                user_num_input = st.sidebar.slider(
+                    f"Valores para {column}",
                     min_value=_min,
                     max_value=_max,
                     value=(_min, _max),
@@ -72,8 +73,8 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 )
                 df = df[df[column].between(*user_num_input)]
             elif is_datetime64_any_dtype(df[column]):
-                user_date_input = right.date_input(
-                    f"Values for {column}",
+                user_date_input = st.sidebar.date_input(
+                    f"Valores para {column}",
                     value=(
                         df[column].min(),
                         df[column].max(),
@@ -84,7 +85,7 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                     start_date, end_date = user_date_input
                     df = df.loc[df[column].between(start_date, end_date)]
             else:
-                user_text_input = right.text_input(
+                user_text_input = st.sidebar.text_input(
                     f"Substring or regex in {column}",
                 )
                 if user_text_input:
