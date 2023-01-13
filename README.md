@@ -1,2 +1,2 @@
-# tcc2
+# TCC2
 Projeto de tcc2
