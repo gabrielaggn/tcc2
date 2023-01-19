@@ -2,14 +2,14 @@
 ## Projeto para obtenção de menção no tcc2 da UnB - FGA.
 Os dados do arquivos .csv e excel são fictícios para teste das funcionalidades da ferramenta.
 
-### Para testar a ferramenta:
+### Para instalar a ferramenta:
 - Baixe os arquivos no botão verde <> Code da maneira que preferir;
 - certifique-se que todos os arquivos encontram-se na mesma pasta;
 - instale as bibliotecas dos arquivos .py no terminal anaconda (ex: pip install SomePackage);
 - abra o terminal anaconda prompt, ou em outro interpretador python3, dentro da pasta tcc2-main e digite o seguinte comando: streamlit run appStreamlit.py;
 - Após isso, o app irá abrir no seu navegador principal.
 
-### Para naveganar na ferramenta:
+### Para navegar na ferramenta:
 - A ferramenta possui 3 telas: Consultar Endereços, Dados Estatísticos e Inserir Dados;
 - Na tela "Consultar Endereços", na barra lateral é possível clicar em "Mostrar Tabela" ou "Órgãos DECEA";
 - Ao clicar em "Órgãos DECEA" é possível visualizar a tabela que consta na MCA 102-7, com os órgãos existentes;
