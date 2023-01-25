@@ -5,7 +5,7 @@ Os dados do arquivos .csv e excel são fictícios para teste das funcionalidades
 ### Para instalar a ferramenta:
 - Baixe os arquivos no botão verde <> Code da maneira que preferir;
 - certifique-se que todos os arquivos encontram-se na mesma pasta;
-- instale as bibliotecas dos arquivos .py no terminal anaconda (ex: pip install SomePackage);
+- instale as seguintes bibliotecas dos arquivos .py, caso ainda não estejam instaladas:  Pandas, Streamlit, PIL,  numpy, io, pyxlsb, Matplotlib e Datetime no terminal anaconda (ex: pip install SomePackage);
 - abra o terminal anaconda prompt, ou em outro interpretador python3, dentro da pasta tcc2-main e digite o seguinte comando: streamlit run appStreamlit.py;
 - Após isso, o app irá abrir no seu navegador principal.
 
