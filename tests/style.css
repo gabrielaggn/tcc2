@@ -1,0 +1,24 @@
+.stDownloadButton > button{
+    color: #ffffff;
+    background-color: #c60c35;
+    font-size: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+.stDownloadButton > button:hover{
+    color: #ffffff;
+    background-color: #920000;
+    border-color: #920000;
+    font-size: 20px;
+    height: 60px;
+    width: 100%;
+}
+
+footer{
+    visibility: hidden;
+}
+
+#MainMenu{
+    visibility: hidden;
+}
