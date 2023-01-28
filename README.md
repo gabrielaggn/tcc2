@@ -2,6 +2,10 @@
 ## Projeto para obtenção de menção no tcc2 da UnB - FGA.
 Os dados do arquivos .csv e excel são fictícios para teste das funcionalidades da ferramenta.
 
+## Uma ferramenta para o STMA (SISTEMA DE TRATAMENTO DE MENSAGENS AERONÁUTICAS):
+O programa trata-se de uma ferramenta web, com a finalidade de fazer um melhor gerenciamento dos endereços telegráficos nacionais.
+Possui filtros, dados estatísticos e a possibilidade de inserir novos dados.
+
 ### Para instalar a ferramenta:
 - Baixe os arquivos no botão verde <> Code e clique em Download ZIP;
 - Descompacte o arquivo .ZIP;
@@ -9,6 +13,9 @@ Os dados do arquivos .csv e excel são fictícios para teste das funcionalidades
 
 - certifique-se que todos os arquivos encontram-se na mesma pasta;
 - instale as seguintes bibliotecas dos arquivos .py, caso ainda não estejam instaladas:  Pandas, Streamlit, PIL,  numpy, io, pyxlsb, Matplotlib e Datetime no terminal anaconda (ex: pip install SomePackage);
+![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/pip_install.png)
+
+
 - abra o terminal anaconda prompt, ou em outro interpretador python3, dentro da pasta tcc2-main e digite o seguinte comando: streamlit run appStreamlit.py;
 - Após isso, o app irá abrir no seu navegador principal.
 
