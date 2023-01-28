@@ -33,7 +33,7 @@ Possui filtros, dados estatísticos e a possibilidade de inserir novos dados.
 
 3. Ao clicar em "Órgãos DECEA" é possível visualizar a tabela que consta na MCA 102-7, com os órgãos existentes;
 
-![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/tela_principal.png)
+![This is an image](https://github.com/gabrielaggn/tcc2/blob/a1216467d90d29cf86b2274aa2d80f39b5b173fd/imagens/orgao-decea.png)
 
 4. Ao clicar em "Mostrar Tabela", é possível fazer filtros por endereço "COMMON NAME", ao selecionar "Todas", é possível visualizar todos os endereços existentes. No botão "Download data as EXCEL" é possível fazer o download da tabela filtrada ou completa se for selecionado "Todas";
 
