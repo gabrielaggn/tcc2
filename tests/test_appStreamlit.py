@@ -2,7 +2,7 @@ import streamlit as st
 import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
-import extracao_dados as ed
+import test_extracao_dados as ed
 from streamlit_option_menu import option_menu
 from PIL import Image
 import datetime
@@ -14,8 +14,8 @@ with open('style.css') as f:
     st.markdown(f"<style>f.read()</style>", unsafe_allow_html = True)
 
 #pegar o df 
-relacao_enderecos = ed.extrair_df()
-orgaos = ed.extrair_df_orgaos()
+relacao_enderecos = ed.test_extrair_df()
+orgaos = ed.test_extrair_df_orgaos()
 
 
 

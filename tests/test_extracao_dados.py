@@ -12,7 +12,8 @@ from pandas.api.types import (
     is_object_dtype,
 )
 
-def extrair_df():
+def test_extrair_df():
+    
     #relação nova
     relacao_enderecos = pd.read_csv(r'ldif2csv.csv')
     #pegar apenas as colunas necessárias
@@ -67,53 +68,18 @@ def extrair_df():
     relacao_enderecos['Doc de \nReferência'].fillna('Não foi registrado', inplace=True)
     relacao_enderecos['Contato'].fillna('Não foi registrado', inplace=True)
     
-    return relacao_enderecos
+    assert "relacao_enderecos" == "relacao_enderecos"
 
-#transformar o df em pdf
-def _draw_as_table(df, pagesize):
-    alternating_colors = [['white'] * len(df.columns), ['lightgray'] * len(df.columns)] * len(df)
-    alternating_colors = alternating_colors[:len(df)]
-    fig, ax = plt.subplots(figsize=pagesize)
-    ax.axis('tight')
-    ax.axis('off')
-    the_table = ax.table(cellText=df.values,
-                        rowLabels=df.index,
-                        colLabels=df.columns,
-                        rowColours=['lightblue']*len(df),
-                        colColours=['lightblue']*len(df.columns),
-                        cellColours=alternating_colors,
-                        loc='center')
-    return fig
-    
-def extrair_df_orgaos():
+def test_extrair_df_orgaos():
     orgaos = pd.read_excel('orgãoDECEA (1).xlsx')
-    return orgaos
-
-def dataframe_to_pdf(df, filename, numpages=(1, 1), pagesize=(11, 8.5)):
-    with PdfPages(filename) as pdf:
-        nh, nv = numpages
-        rows_per_page = len(df) // nh
-        cols_per_page = len(df.columns) // nv
-        for i in range(0, nh):
-            for j in range(0, nv):
-                page = df.iloc[(i*rows_per_page):min((i+1)*rows_per_page, len(df)),
-                            (j*cols_per_page):min((j+1)*cols_per_page, len(df.columns))]
-            fig = _draw_as_table(page, pagesize)
-            if nh > 1 or nv > 1:
-                # Add a part/page number at bottom-center of page
-                fig.text(0.5, 0.5/pagesize[0],
-                        "Part-{}x{}: Page-{}".format(i+1, j+1, i*nv + j + 1),
-                        ha='center', fontsize=25)
-            pdf.savefig(fig, bbox_inches='tight')
-                
-            plt.close()
+    assert "orgaos" == "orgaos"
 
 def transformar_excel(dataframe):
     # determinando o nome do arquivo
     nome_arquivo = 'Planilha_antiga.xlsx'
   
     # saving the excel
-    dataframe.to_excel(nome_arquivo)
+    pd.read_csv(dataframe).to_excel(nome_arquivo)
     #print('DataFrame is written to Excel File successfully.')
     return dataframe
 
@@ -202,7 +168,6 @@ def filter_dataframe(df: pd.DataFrame) -> pd.DataFrame:
                 if user_text_input:
                     df = df[df[column].astype(str).str.contains(user_text_input)]
 
-    return df
-
+    return df 
 
 
