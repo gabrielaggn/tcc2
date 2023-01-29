@@ -55,7 +55,7 @@ Possui filtros, dados estatísticos e a possibilidade de inserir novos dados.
 
 9. Na primeira caixa é possível selecionar o endereço o qual deseja atualizar os dados.
 
-![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/add_filtros2.png)
+![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/inserir_dados2.png)
 
 
 
