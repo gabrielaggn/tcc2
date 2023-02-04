@@ -16,7 +16,7 @@ Possui filtros, dados estatísticos e a possibilidade de inserir novos dados.
 - instale as seguintes bibliotecas dos arquivos .py, caso ainda não estejam instaladas:  Pandas, Streamlit, PIL,  numpy, io, pyxlsb, Matplotlib e Datetime no terminal anaconda (ex: pip install SomePackage);
 
 ```
-$ pip install streamlit
+ pip install streamlit
 ```
 
 ![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/pip_install.png)
@@ -24,7 +24,7 @@ $ pip install streamlit
 - abra o terminal anaconda prompt, ou em outro interpretador python3, dentro da pasta tcc2-main e digite o seguinte comando: streamlit run appStreamlit.py;
 
 ```
-$ streamlit run appStreamlit.py
+streamlit run appStreamlit.py
 ```
 
 ![This is an image](https://github.com/gabrielaggn/tcc2/blob/main/imagens/streamlit.png)
